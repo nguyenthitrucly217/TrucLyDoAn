@@ -9,7 +9,7 @@ import productservice from "../../../services/ProductServices";
 
 function ProductBrand(){
     const {slug} = useParams();//hoa-tulip
-    const [limit, setLimit] = useState(8);
+    const [limit, setLimit] = useState(4);
     const [title, setTitle] = useState("");
     const [products, setProducts] = useState([]);
     document.title=title;
@@ -35,7 +35,6 @@ function ProductBrand(){
         <div className="container my-4">
             <div className="row">
                 <div className="col-md-3">
-                    <ListCategory/>
                     <ListBrand/>
                 </div>
                 <div className="col-md-9">
@@ -47,7 +46,7 @@ function ProductBrand(){
                     </div>
                     <div className="row">
                         <div className="col-12 text-center my-4">
-                            <button className="btn btn-success" onClick={() => setLimit(limit + 8)}>Xem Thêm</button>
+                            <button className="btn btn-success" onClick={() => setLimit(limit + 4)}>Xem Thêm</button>
                         </div>
                     </div>
                 </div>

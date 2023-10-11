@@ -14,6 +14,8 @@ function CategoryCreate() {
     },[]);
 
     const [name, setName] = useState("");
+    const [description, setDescription] = useState("");
+
     const [metakey, setMetakey] = useState("");
     const [metadesc, setMetadesc] = useState("");
     const [parent_id, setParentId] = useState(0);
@@ -27,6 +29,8 @@ function CategoryCreate() {
         var category= new FormData();
 
         category.append("name",name);
+        category.append("description",description);
+
         category.append(" metakey", metakey);
         category.append("metadesc",metadesc);
         category.append("parent_id",parent_id);
@@ -64,12 +68,17 @@ function CategoryCreate() {
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="metakey">Từ khóa</label>
-                                <textarea type="metakey" name="name" value={metakey} onChange={(e) => setMetakey(e.target.value)} className="form-control"></textarea>
+                                <textarea type="metakey" name="metakey" value={metakey} onChange={(e) => setMetakey(e.target.value)} className="form-control"></textarea>
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="metadesc">Mô tả</label>
-                                <textarea type="metadesc" name="name" value={metadesc} onChange={(e) => setMetadesc(e.target.value)} className="form-control"></textarea>
+                                <textarea type="metadesc" name="metadesc" value={metadesc} onChange={(e) => setMetadesc(e.target.value)} className="form-control"></textarea>
                             </div>
+                            <div className="mb-3">
+                                <label htmlFor="metadesc">Chi tiết</label>
+                                <textarea type="description" name="description" value={description} onChange={(e) => setDescription(e.target.value)} className="form-control"></textarea>
+                            </div>
+
                         </div>
 
                         <div className="col-md-3">

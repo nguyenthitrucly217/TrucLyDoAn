@@ -49,6 +49,7 @@ function SliderList() {
                             <th>Tên Slider</th>
                             <th>Đường Dẫn</th>
                             <th>Vị Trí</th>
+                            <th>Chi tiết</th>
                             <th>Ngày Tạo</th>
                             <th>Chức Năng</th>
 
@@ -76,6 +77,10 @@ function SliderList() {
                                 <td>
                                     {slider.position}
                                 </td>
+                                <td>
+                                    {slider.description}
+                                </td>
+
                                 <td>
                                     {slider.created_at}
                                 </td>

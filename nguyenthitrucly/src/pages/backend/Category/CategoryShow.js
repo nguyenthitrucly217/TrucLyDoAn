@@ -66,6 +66,11 @@ function CategoryShow() {
                             <td>{category.name}</td>
                         </tr>
                         <tr>
+                            <th>Chi tiết</th>
+                            <td>{category.description}</td>
+                        </tr>
+
+                        <tr>
                             <th>Slug</th>
                             <td>{category.slug}</td>
                         </tr>

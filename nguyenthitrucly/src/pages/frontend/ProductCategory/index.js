@@ -9,7 +9,7 @@ import ListBrand from "../../../layouts/LayoutSite/ListBrand";
 
 function ProductCategory() {
     const { slug } = useParams();//hoa-tulip
-    const [limit, setLimit] = useState(8);
+    const [limit, setLimit] = useState(4);
     const [title, setTitle] = useState("");
     const [products, setProducts] = useState([]);
     document.title = title;
@@ -35,7 +35,6 @@ function ProductCategory() {
                 <div className="row">
                     <div className="col-md-3">
                         <ListCategory/>
-                        <ListBrand/>
                     </div>
                     <div className="col-md-9">
                         <h3 className="text-center text-danger">{title}</h3>
@@ -46,7 +45,7 @@ function ProductCategory() {
                         </div>
                         <div className="row">
                             <div className="col-12 text-center my-4">
-                                <button className="btn btn-success" onClick={() => setLimit(limit + 8)}>Xem Thêm</button>
+                                <button className="btn btn-success" onClick={() => setLimit(limit + 4)}>Xem Thêm</button>
                             </div>
                         </div>
                     </div>

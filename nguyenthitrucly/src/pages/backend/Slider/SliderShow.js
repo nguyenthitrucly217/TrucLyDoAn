@@ -75,9 +75,14 @@ function SliderShow() {
                             <td>{slider.sort_order}</td>
                         </tr>
                         <tr>
-                            <th>position</th>
+                            <th>Vị trí</th>
                             <td>{slider.position}</td>
                         </tr>
+                        <tr>
+                            <th>Chi tiết</th>
+                            <td>{slider.description}</td>
+                        </tr>
+
                         <tr>
                             <th>Ngày tạo</th>
                             <td>{slider.created_at}</td>

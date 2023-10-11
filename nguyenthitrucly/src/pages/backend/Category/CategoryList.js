@@ -45,6 +45,8 @@ function CategoryList() {
                         <th style ={{width :50}}>#</th>
                             <th className="text-center">Hình</th>
                             <th className="text-center">Tên dang mục</th>
+                            <th className="text-center">Chi tiết</th>
+
                             <th className="text-center">Slup</th>
                             <th style ={{width :250}}className="text-center">Ngày tạo</th>
                             <th style ={{width :150}}className="text-center">Chức năng</th>
@@ -66,6 +68,8 @@ function CategoryList() {
                                    
                                     </td>
                                     <td>{category.name}</td>
+                                    <td>{category.description}</td>
+
                                     <td>{category.slug}</td>
                                     <td className="text-center">{category.created_at}</td>
                                     <td>

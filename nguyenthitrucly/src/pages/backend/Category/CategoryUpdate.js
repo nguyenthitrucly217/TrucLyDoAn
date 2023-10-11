@@ -23,6 +23,8 @@ function CategoryUpdate() {
                 const tmp=result.data.category;
                 // setCategory(tmp);
                 setName(tmp.name);
+                setDescription(tmp.description);
+
                 setMetakey(tmp.metakey);
                 setMetadesc(tmp.metadesc);
                 setStatus(tmp.status);
@@ -36,6 +38,8 @@ function CategoryUpdate() {
 
 
 const [name, setName] = useState('');
+const [description, setDescription] = useState('');
+
 const [metakey, setMetakey] = useState('');
 const [metadesc, setMetadesc] = useState('');
 const [parent_id, setParentId] = useState(0);
@@ -49,6 +53,8 @@ async function categoryEdit(event) {
     var category= new FormData();
 
     category.append("name",name);
+    category.append("description",description);
+
     category.append("metakey",metakey);
     category.append("metadesc",metadesc);
     category.append("sort_order",sort_order);
@@ -115,7 +121,11 @@ async function categoryEdit(event) {
                                     onChange={(e) => setMetadesc(e.target.value)}
                                     className="form-control"></textarea>
                             </div>
-
+                            <div className="mb-3">
+                                <label htmlFor="metadesc">Chi tiết</label>
+                                <textarea type="description" name="description" value={description} onChange={(e) => setDescription(e.target.value)} className="form-control"></textarea>
+                            </div>
+        
                         </div>
 
                         <div className="col-md-3">

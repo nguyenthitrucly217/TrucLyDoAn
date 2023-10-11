@@ -14,6 +14,8 @@ function BrandCreate() {
 
     },[]);
     const [name, setName] = useState("");
+    const [description, setDescription] = useState("");
+
     const [metakey, setMetakey] = useState("");
     const [metadesc, setMetadesc] = useState("");
     const [sort_order, setSortOrder] = useState(0);
@@ -26,6 +28,8 @@ function BrandCreate() {
         var brand= new FormData();
 
         brand.append("name",name);
+        brand.append("description",description);
+
         brand.append(" metakey", metakey);
         brand.append("metadesc",metadesc);
         brand.append("sort_order",sort_order);
@@ -64,6 +68,11 @@ function BrandCreate() {
                                 <label htmlFor="metakey">Từ khóa</label>
                                 <textarea type="metakey" name="name" value={metakey} onChange={(e) => setMetakey(e.target.value)} className="form-control"></textarea>
                             </div>
+                            <div className="mb-3">
+                                <label htmlFor="metakey">Chi tiết</label>
+                                <textarea type="metakey" name="description" value={description} onChange={(e) => setDescription(e.target.value)} className="form-control"></textarea>
+                            </div>
+
                             <div className="mb-3">
                                 <label htmlFor="metadesc">Mô tả</label>
                                 <textarea type="metadesc" name="name" value={metadesc} onChange={(e) => setMetadesc(e.target.value)} className="form-control"></textarea>

@@ -10,6 +10,7 @@ import PostTopic from "../pages/frontend/Post/PostTopic";
 import Login from "../pages/frontend/Login";
 import Register from "../pages/frontend/Register"
 import ProductSale from "../pages/frontend/Home/ProductSale";
+import Cart from "../pages/frontend/Cart/Cart";
 
 
 // import Login from "../pages/frontend/Home/Login";
@@ -26,6 +27,8 @@ const RouterPublic=[
     { path:'thuong-hieu/:slug', component:ProductBrand},
     { path:'chi-tiet-san-pham/:slug', component:ProductDetail},
     { path:'chi-tiet-bai-viet/:id', component:PostDetail},
+    { path:'cart', component:Cart},
+
 
 
     

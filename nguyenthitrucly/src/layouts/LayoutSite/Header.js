@@ -30,8 +30,8 @@ function Header() {
                     <a href='login' class="btn btn-link">Đăng nhập</a>                 
 
                     </div>
-                    <div className="col-md-1">   <button className="btn btn-primary">
-                                   <FaCartPlus/></button> </div> 
+                    <div className="col-md-1">  
+                    <a href="cart" className="btn btn-primary"><FaCartPlus/></a> </div> 
                      {/* <div className="col-md-4">TIMKIEM</div> 
             <div className="col-md-3">HHH</div>    
                 <div className="col-md-1"><FaCartPlus></div> */}

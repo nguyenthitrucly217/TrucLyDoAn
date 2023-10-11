@@ -23,6 +23,7 @@ function SliderUpdate() {
                     setLink(tmp.link);
                     setSortOrder(tmp.sort_order);
                     setPosition(tmp.position);
+                    setDescription(tmp.description);
                     setStatus(tmp.status);
                  
                 });
@@ -36,6 +37,7 @@ function SliderUpdate() {
         const [link, setLink] = useState('');
         const [sort_order, setSortOrder] = useState(0);
         const [position, setPosition] = useState("");
+        const [description, setDescription] = useState("");
         const [status, setStatus] = useState(1);
     
     async function sliderEdit(event) {
@@ -48,6 +50,7 @@ function SliderUpdate() {
         slider.append("name",name);
         slider.append("link",link);
         slider.append("position",position);
+        slider.append("description",description);
 
         slider.append("sort_order",sort_order);
         slider.append("status",status);
@@ -107,11 +110,20 @@ function SliderUpdate() {
                                     className="form-control"></textarea>
                             </div>
                             <div className="mb-3">
-                                <label htmlFor="name">position</label>
+                                <label htmlFor="name">Vị trí</label>
                                 <textarea 
                                     name="position"
                                     value={position}
                                     onChange={(e) => setPosition(e.target.value)}
+                                    className="form-control"></textarea>
+                            </div>
+
+                            <div className="mb-3">
+                                <label htmlFor="name">Chi tiết</label>
+                                <textarea 
+                                    name="position"
+                                    value={description}
+                                    onChange={(e) => setDescription(e.target.value)}
                                     className="form-control"></textarea>
                             </div>
 

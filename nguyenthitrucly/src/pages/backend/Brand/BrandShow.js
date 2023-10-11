@@ -66,6 +66,11 @@ function BrandShow() {
                                 <td>{brand.name}</td>
                             </tr>
                             <tr>
+                                <th>Chi tiết</th>
+                                <td>{brand.description}</td>
+                            </tr>
+
+                            <tr>
                                 <th>Slug</th>
                                 <td>{brand.slug}</td>
                             </tr>

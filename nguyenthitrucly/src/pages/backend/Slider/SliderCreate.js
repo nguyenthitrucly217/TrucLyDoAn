@@ -19,6 +19,8 @@ function SliderCreate() {
     const [link, setLink] = useState('');
     const [sort_order, setSortOrder] = useState(0);
     const [position, setPosition] = useState("");
+    const [description, setDescription] = useState("");
+
     const [status, setStatus] = useState(1);
 
     async function sliderStore(event) {
@@ -31,6 +33,7 @@ function SliderCreate() {
         slider.append("name",name);
         slider.append("link",link);
         slider.append("position",position);
+        slider.append("description",description);
 
         slider.append("sort_order",sort_order);
         slider.append("status",status);
@@ -87,6 +90,16 @@ function SliderCreate() {
                                     name="position"
                                     value={position}
                                     onChange={(e) => setPosition(e.target.value)}
+                                    className="form-control"></textarea>
+                            </div>
+
+
+                            <div className="mb-3">
+                                <label htmlFor="name">Chi tiết</label>
+                                <textarea 
+                                    name="position"
+                                    value={description}
+                                    onChange={(e) => setDescription(e.target.value)}
                                     className="form-control"></textarea>
                             </div>
 

@@ -26,7 +26,7 @@ function BrandUpdate() {
                 setMetakey(tmp.metakey);
                 setMetadesc(tmp.metadesc);
                 setStatus(tmp.status);
-                // setParentId(tmp.parent_id);
+                setDescription(tmp.description);
                 setSortOrder(tmp.sort_order);
              
             });
@@ -38,7 +38,7 @@ function BrandUpdate() {
 const [name, setName] = useState('');
 const [metakey, setMetakey] = useState('');
 const [metadesc, setMetadesc] = useState('');
-// const [parent_id, setParentId] = useState(0);
+const [description, setDescription] = useState('');
 const [sort_order, setSortOrder] = useState(0);
 const [status, setStatus] = useState(0);
 async function brandEdit(event) {
@@ -49,6 +49,7 @@ async function brandEdit(event) {
     var brand= new FormData();
 
     brand.append("name",name);
+    brand.append("description",description);
     brand.append("metakey",metakey);
     brand.append("metadesc",metadesc);
     brand.append("sort_order",sort_order);
@@ -107,6 +108,11 @@ async function brandEdit(event) {
                                     onChange={(e) => setMetakey(e.target.value)}
                                     className="form-control"></textarea>
                             </div>
+                            <div className="mb-3">
+                                <label htmlFor="metakey">Chi tiết</label>
+                                <textarea type="metakey" name="description" value={description} onChange={(e) => setDescription(e.target.value)} className="form-control"></textarea>
+                            </div>
+
                             <div className="mb-3">
                                 <label htmlFor="name">Mô tả</label>
                                 <textarea 
